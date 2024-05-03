@@ -6,23 +6,37 @@
   <title>Document</title>
 </head>
 <body>
+  <div id="root">
+
+  </div>
   
 </body>
   <script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>
   <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
 
-<script>
-  
-  let Fragment=(
+   let root=ReactDOM.createRoot(document.getElementById("root"));
+   function handleClick(){
+    alert("Hello")
+   }
+
+   let para=(
+    <>
     <p>React is a javascript library</p>
-    <div className="main">
-     <p>Click the below button to alert Hello</p>
-      <button onClick={() => alert("Hello")}>Alert Hello</button>
+    <div class="main">
+      <p>Click the below button to alert 'Hello</p>
+      <button onClick={handleClick}>Alert Hello</button>
     </div>
-);
+    </>
+   )
 
 
-ReactDom.createRoot(rootElement).render(Fragment)
+
+
+   let element=React.createElement("p",{},para);
+
+   root.render(element)
+
 </script>
 </html>

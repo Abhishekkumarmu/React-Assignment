@@ -14,15 +14,18 @@
   <script type="text/babel">
     // Your task starts here
     
-  let rootElement=document.getElementById("root");
+  // let rootElement=document.getElementById("root");
+  let root=ReactDOM.createRoot(document.getElementById("root"));
 
   
 
 //React.createElement(tagName,properties/attribute,children)
 
-let header=React.createElement("p",{id: "header"},"Seize the day");
+let element=React.createElement("p",{},"Seize the day");
 
-ReactDOM.createRoot(rootElement).render(header)
+// ReactDOM.createRoot(rootElement).render(element)
+
+root.render(element);
 
 
   </script>

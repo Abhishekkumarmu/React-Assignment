@@ -16,16 +16,16 @@
 
     //let rootElement=document.getElementById("root");
 
-    const reactRoot = ReactDOM.createRoot(document.getElementById("root"));
+    const root = ReactDOM.createRoot(document.getElementById("root"));
 
-    let flag=false
+    let flag=true
 
     let value1="Seize the day"
-    let value2="Hello"
+    let value2="Don't Seize the day"
 
     const element = flag ? React.createElement("p", {id: "header"},value1 ):React.createElement("p", {id: "header"},value2)
       
-      reactRoot.render(element);
+      root.render(element);
 
     
 
