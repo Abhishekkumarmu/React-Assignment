@@ -1,0 +1,60 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Template</title>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+  <script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>
+  <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+
+   function ColorPicker() {
+    const [color, setColor]=React.useState("");
+    const [isValid, setIsValid]=React.useState(true);
+
+      function handleColorChange(event){
+      setColor(event.target.value);
+      }
+
+
+       return(
+        <>
+        <div style={{
+            width:"165px",
+            height: "165px",
+            backgroundColor: isValid ? color : "white",
+            border: "5px solid red",
+        }}>
+        
+        </div>
+
+        <br/>
+     
+
+
+        
+
+        <input 
+          placeholder="Enter Color name"
+          value={color}
+          onChange={handleColorChange}/>
+
+
+
+         
+        </>
+      
+   )
+   
+      }
+
+let rootElement=document.getElementById("root")
+ReactDOM.createRoot(rootElement).render(<ColorPicker/>)
+
+
+</script>
+</html>
